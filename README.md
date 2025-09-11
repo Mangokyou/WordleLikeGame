@@ -1,1 +1,1 @@
-Haha eat shit aka ich mach das später
+Will do when im finished with the main programm
