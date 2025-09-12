@@ -27,7 +27,7 @@ boxes = [] # to generate and update guess boxes
 current_row = 0 # to iterate through the boxes
 current_col = 0
 current_guess = [0,0,0,0,0] # needed to validate guess
-finish =  # To keep track if the game state
+finish =  False # To keep track if the game state
 word = choice(words).upper() # choose a random word from the word list
 
 class Boxes: # class for the guess boxes
@@ -109,10 +109,15 @@ def checker(correct, guessed): # compare guessed word to correct word
                 if letters[guessed[i]].color != "Green":
                     letters[guessed[i]].color = "Orange"
                     explored += guessed[i]
-            else:
-                boxes[current_col][i].color = "Red"
-                letters[guessed[i]].color = "Red"
-                explored += guessed[i]
+                else:
+                    boxes[current_col][i].color = "Red"
+                    letters[guessed[i]].color = "Red"
+                    explored += guessed[i]
+
+        else:
+            boxes[current_col][i].color = "Red"
+            letters[guessed[i]].color = "Red"
+            explored += guessed[i]
 
     if guessed == correct: # True if guessed word is correct
         return True
