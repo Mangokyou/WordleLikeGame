@@ -14,12 +14,12 @@ height = 1000
 screen = pygame.display.set_mode((width, height))
 
 clock = pygame.time.Clock()
-letter_font = pygame.font.Font("letter_font.otf", 40) # Font for the letters inside the guess boxes
-other_font = pygame.font.Font("letter_font.otf", 25) # Font for the other letters
+letter_font = pygame.font.Font("../letter_font.otf", 40) # Font for the letters inside the guess boxes
+other_font = pygame.font.Font("../letter_font.otf", 25) # Font for the other letters
 
-with open("english_words.txt", "r") as f: # can use other word files for input
+with open("../english_words.txt", "r") as f: # can use other word files for input
     words = f.read().split()
-with open("english_words_valid.txt", "r") as f:
+with open("../english_words_valid.txt", "r") as f:
     valid = f.read().split()
 
 letters = {} # to keep track of already used letters

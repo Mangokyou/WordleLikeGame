@@ -7,7 +7,7 @@ word_list = "english_words.txt"
 with open(word_list, "r") as f:
     words = f.read().split()
 
-with open("english_words_valid.txt", "r") as f:
+with open("../english_words_valid.txt", "r") as f:
     valid = f.read().split()
 
 def checker(word, guess):
