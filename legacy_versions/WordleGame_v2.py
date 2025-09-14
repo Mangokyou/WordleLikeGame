@@ -84,15 +84,14 @@ create_letter()
 
 def guess(current): # check if the guessed word has the right parameters
         guessed = "".join(current)
-        if  guessed.lower() not in valid:
-            return False
+        if guessed.lower() not in valid:
+            print("Wrong")
         else:
-            return True
+            print("Correct")
+
 
 def checker(correct, guessed): # compare guessed word to correct word
     guessed = "".join(guessed)
-    #print(guessed)
-    #print(word)
     explored = ""
     for i in range(0,5): #small loop to give every letter and box the right color while comparing
         if guessed[i] == word[i]:
@@ -141,7 +140,7 @@ while True: #main game loop
                 current_guess[current_row] = event.unicode.upper()
                 if current_row < 4:
                     current_row += 1
-                #print(current_guess)
+
 
             if event.unicode == "0": # to restart the game
                 letters = {}
